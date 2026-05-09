@@ -4,6 +4,8 @@ An independent senior code reviewer that finds real bugs in pull requests and co
 
 This specialist solves the "AI reviewed its own code and missed the obvious bug" problem. It separates writer from reviewer, applies a strict evidence rule to every finding, and returns either high-confidence bugs or `PASS — 0 issues`. Strongest on race conditions, async lifecycle bugs, authentication gaps, and error-path state mutations.
 
+**The part nobody else does:** a one-time 3-minute onboarding interview that runs before the first review. It calibrates to your experience level (senior dev / hobbyist / non-developer), reads your codebase via grep, then asks the questions only *you* can answer — who uses the product, what data is sensitive, which patterns look like bugs but are intentional. Future reviews read those answers and stop flagging things you already know are fine. Most AI code reviewers (Cursor's bug bot, GitHub's bug bot, Codium, Coursera-grade tools) are stateless and re-flag the same false positives forever; this one gets sharper over time.
+
 ## Quick start
 
 1. Copy this folder into your repo, or upload its contents to your agent as project knowledge.
